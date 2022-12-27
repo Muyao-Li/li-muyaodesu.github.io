@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Muyao&#39;s Linux Hugo Site</title>
+    <link>https://muyao-li.github.io/li-muyaodesu.github.io/post/</link>
+    <description>Recent content in Posts on Muyao&#39;s Linux Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 26 Dec 2022 15:06:55 +0800</lastBuildDate><atom:link href="https://muyao-li.github.io/li-muyaodesu.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux大作业步骤</title>
+      <link>https://muyao-li.github.io/li-muyaodesu.github.io/post/linux%E5%A4%A7%E4%BD%9C%E4%B8%9A%E6%AD%A5%E9%AA%A4/</link>
+      <pubDate>Mon, 26 Dec 2022 15:06:55 +0800</pubDate>
+      
+      <guid>https://muyao-li.github.io/li-muyaodesu.github.io/post/linux%E5%A4%A7%E4%BD%9C%E4%B8%9A%E6%AD%A5%E9%AA%A4/</guid>
+      <description>Linux大作业步骤 本次大作业使用Debian10，因为安装和编译比openeuler方便快捷。
+1.在Linux下，安装git，使用git管理大作业相关的代码、配置文件等，要求有能反映大作业过程的git提交记录。 安装完成后，在gitee上建立本项目仓库。
+配置本地账户密码：
+输入如下查看：
+git config --list --global 建立远程连接:
+输入git init初始化仓库:
+在要push的目录下输入:
+git add . git commit -m &amp;#34;test&amp;#34; git push -u origin &amp;#34;master&amp;#34; 2.在Linux下，利用 socket 技术编写程序，包含客户端和服务端，实现两者之间的信息传递。 在桌面创建linuxhomework文件夹，在文件夹里创建service.c文件和client.c文件，放入以下代码：
+服务端代码：
+#include &amp;lt;stdio.h&amp;gt;#include &amp;lt;stdlib.h&amp;gt;#include &amp;lt;unistd.h&amp;gt;#include &amp;lt;string.h&amp;gt;#include &amp;lt;ctype.h&amp;gt;#include &amp;lt;sys/socket.h&amp;gt;#include &amp;lt;sys/types.h&amp;gt;#include &amp;lt;netinet/in.h&amp;gt;#include &amp;lt;arpa/inet.h&amp;gt; #define SERV_IP &amp;#34;127.0.0.1&amp;#34; /* 服务器可以用 htonl(INADDR_ANY) 自动选择可用IP */#define SERV_PORT 18888 #define MAX_CONN 100 /* 连接队列最多可以有 100 个客户端在排队等待建立连接 */ int main() { char buf[1024]; int n; int sockfd, clientfd; struct sockaddr_in serv_addr, client_addr; socklen_t socklen; sockfd = socket(AF_INET, SOCK_STREAM, 0); /* IPv4 协议， TCP 协议*/ if (sockfd == -1) { perror(&amp;#34;socket&amp;#34;); return -1; } bzero(&amp;amp;serv_addr, sizeof(serv_addr)); serv_addr.</description>
+    </item>
+    
+    <item>
+      <title>Linux学习笔记</title>
+      <link>https://muyao-li.github.io/li-muyaodesu.github.io/post/linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Thu, 22 Dec 2022 19:31:51 +0800</pubDate>
+      
+      <guid>https://muyao-li.github.io/li-muyaodesu.github.io/post/linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description>一、文件系统命令 1.shell shell是Linux里用户使用Linux的桥梁（命令接口），Linux下默认的shell一般是bash。
+Linux的通用命令格式：命令 [选项] [参数]
+ 选项：
+ 以“-”引导短格式选项（单个字符） 以“- -”引导长格式选项（多个字符） 多个短格式选项可以写在一起，只用一个“-”引导  常用的shell快捷键：
+ Tab键：自动补齐 快捷键Ctrl＋U：清空至行首 快捷键Ctrl＋L：清屏 ↑：上一条历史记录 ↓：下一条历史记录   命令帮助文档
+sudo yum install coreutils-help bash-help //安装 [命令] --help //适用于大多数文档 2.Linux文件系统 Linux文件系统继承了Unix的特点，它采用了==树形目录结构==。
+/：根目录 /boot：启动文件 /dev：设备文件 /proc：内核与进程镜像 /mnt：临时挂载 /media：挂载媒体设备 /root：root用户的$HOME目录 /home：包含普通用户的$HOME目录 /bin：系统程序 /sbin：管理员系统程序 /lib：系统程序库文件 /etc：系统程序与大部分应用程序的全局配置文件 /usr：系统存放程序的目录 /var：动态数据（包含log系统日志文件） /tmp：临时文件 3.目录操作命令 基础操作命令：
+pwd //打印当前工作目录的绝对路径 . //代表当前所在目录 .. //代表当前目录位置的上一层目录 ~ //代表家目录 cd //更改工作目录路径 使用mkdir创建目录：
+mkdir test //在当前工作目录下创建目录test mkdir -p picture/test //若路径中的目录不存在，先创建目录 使用rmdir删除空目录。 使用ls列出目录和文件信息：</description>
+    </item>
+    
+  </channel>
+</rss>

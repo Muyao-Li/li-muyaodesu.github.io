@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Linux大作业步骤 // Muyao&#39;s Linux Hugo Site</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.80.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/li-muyaodesu.github.io/css/main.min.9e9c6027c30f5aa9423b581bd9cddd1ddc66088adb9c2604f89eb5828efea5a1.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Linux大作业步骤"/>
+<meta name="twitter:description" content="Linux大作业步骤 本次大作业使用Debian10，因为安装和编译比openeuler方便快捷。
+1.在Linux下，安装git，使用git管理大作业相关的代码、配置文件等，要求有能反映大作业过程的git提交记录。 安装完成后，在gitee上建立本项目仓库。
+配置本地账户密码：
+输入如下查看：
+git config --list --global 建立远程连接:
+输入git init初始化仓库:
+在要push的目录下输入:
+git add . git commit -m &#34;test&#34; git push -u origin &#34;master&#34; 2.在Linux下，利用 socket 技术编写程序，包含客户端和服务端，实现两者之间的信息传递。 在桌面创建linuxhomework文件夹，在文件夹里创建service.c文件和client.c文件，放入以下代码：
+服务端代码：
+#include &lt;stdio.h&gt;#include &lt;stdlib.h&gt;#include &lt;unistd.h&gt;#include &lt;string.h&gt;#include &lt;ctype.h&gt;#include &lt;sys/socket.h&gt;#include &lt;sys/types.h&gt;#include &lt;netinet/in.h&gt;#include &lt;arpa/inet.h&gt; #define SERV_IP &#34;127.0.0.1&#34; /* 服务器可以用 htonl(INADDR_ANY) 自动选择可用IP */#define SERV_PORT 18888 #define MAX_CONN 100 /* 连接队列最多可以有 100 个客户端在排队等待建立连接 */ int main() { char buf[1024]; int n; int sockfd, clientfd; struct sockaddr_in serv_addr, client_addr; socklen_t socklen; sockfd = socket(AF_INET, SOCK_STREAM, 0); /* IPv4 协议， TCP 协议*/ if (sockfd == -1) { perror(&#34;socket&#34;); return -1; } bzero(&amp;serv_addr, sizeof(serv_addr)); serv_addr."/>
+
+    <meta property="og:title" content="Linux大作业步骤" />
+<meta property="og:description" content="Linux大作业步骤 本次大作业使用Debian10，因为安装和编译比openeuler方便快捷。
+1.在Linux下，安装git，使用git管理大作业相关的代码、配置文件等，要求有能反映大作业过程的git提交记录。 安装完成后，在gitee上建立本项目仓库。
+配置本地账户密码：
+输入如下查看：
+git config --list --global 建立远程连接:
+输入git init初始化仓库:
+在要push的目录下输入:
+git add . git commit -m &#34;test&#34; git push -u origin &#34;master&#34; 2.在Linux下，利用 socket 技术编写程序，包含客户端和服务端，实现两者之间的信息传递。 在桌面创建linuxhomework文件夹，在文件夹里创建service.c文件和client.c文件，放入以下代码：
+服务端代码：
+#include &lt;stdio.h&gt;#include &lt;stdlib.h&gt;#include &lt;unistd.h&gt;#include &lt;string.h&gt;#include &lt;ctype.h&gt;#include &lt;sys/socket.h&gt;#include &lt;sys/types.h&gt;#include &lt;netinet/in.h&gt;#include &lt;arpa/inet.h&gt; #define SERV_IP &#34;127.0.0.1&#34; /* 服务器可以用 htonl(INADDR_ANY) 自动选择可用IP */#define SERV_PORT 18888 #define MAX_CONN 100 /* 连接队列最多可以有 100 个客户端在排队等待建立连接 */ int main() { char buf[1024]; int n; int sockfd, clientfd; struct sockaddr_in serv_addr, client_addr; socklen_t socklen; sockfd = socket(AF_INET, SOCK_STREAM, 0); /* IPv4 协议， TCP 协议*/ if (sockfd == -1) { perror(&#34;socket&#34;); return -1; } bzero(&amp;serv_addr, sizeof(serv_addr)); serv_addr." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://muyao-li.github.io/li-muyaodesu.github.io/post/linux%E5%A4%A7%E4%BD%9C%E4%B8%9A%E6%AD%A5%E9%AA%A4/" />
+<meta property="article:published_time" content="2022-12-26T15:06:55+08:00" />
+<meta property="article:modified_time" content="2022-12-26T15:06:55+08:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://muyao-li.github.io/li-muyaodesu.github.io/"><img class="app-header-avatar" src="/li-muyaodesu.github.io/avatar.jpg" alt="John Doe" /></a>
+      <span class="app-header-title">Muyao&#39;s Linux Hugo Site</span>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Linux大作业步骤</h1>
+      <div class="post-meta">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Dec 26, 2022
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h1 id="linux大作业步骤">Linux大作业步骤</h1>
+<p><em>本次大作业使用Debian10，因为安装和编译比openeuler方便快捷。</em></p>
+<h4 id="1在linux下安装git使用git管理大作业相关的代码配置文件等要求有能反映大作业过程的git提交记录">1.在Linux下，安装git，使用git管理大作业相关的代码、配置文件等，要求有能反映大作业过程的git提交记录。</h4>
+<p><img src="https://muyao-li.github.io/li-muyaodesu.github.io/images/73600f4ac62e41acae68dfed6fbda59f.png" alt="在这里插入图片描述"></p>
+<p>安装完成后，在gitee上建立本项目仓库。</p>
+<p>配置本地账户密码：</p>
+<p><img src="https://muyao-li.github.io/li-muyaodesu.github.io/images/381fdf10cd8e427a97669d41ca5b7df0.png" alt="在这里插入图片描述"></p>
+<p>输入如下查看：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">git config --list --global
+</code></pre></div><p><img src="https://muyao-li.github.io/li-muyaodesu.github.io/images/d2802574afeb4480a615fb091a7e6baf.png" alt="在这里插入图片描述"></p>
+<p>建立远程连接:</p>
+<p><img src="https://muyao-li.github.io/li-muyaodesu.github.io/images/ee408fca035743b49f12ab41d30f4845.png" alt="在这里插入图片描述"></p>
+<p>输入git init初始化仓库:</p>
+<p><img src="https://muyao-li.github.io/li-muyaodesu.github.io/images/7889982b5e524726886f62340e4954d3.png" alt="在这里插入图片描述"></p>
+<p>在要push的目录下输入:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">git add .
+git commit -m <span style="color:#e6db74">&#34;test&#34;</span>
+git push -u origin <span style="color:#e6db74">&#34;master&#34;</span>
+</code></pre></div><p><img src="https://muyao-li.github.io/li-muyaodesu.github.io/images/88e44deea8614e90ba606a65f41abb8b.png" alt="在这里插入图片描述"></p>
+<h4 id="2在linux下利用-socket-技术编写程序包含客户端和服务端实现两者之间的信息传递">2.在Linux下，利用 socket 技术编写程序，包含客户端和服务端，实现两者之间的信息传递。</h4>
+<p>在桌面创建linuxhomework文件夹，在文件夹里创建service.c文件和client.c文件，放入以下代码：</p>
+<p>服务端代码：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdlib.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;unistd.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;string.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;ctype.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;sys/socket.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;sys/types.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;netinet/in.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;arpa/inet.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">#define SERV_IP &#34;127.0.0.1&#34; </span><span style="color:#75715e">/* 服务器可以用 htonl(INADDR_ANY) 自动选择可用IP */</span><span style="color:#75715e">
+</span><span style="color:#75715e">#define SERV_PORT 18888
+</span><span style="color:#75715e">#define MAX_CONN 100 </span><span style="color:#75715e">/* 连接队列最多可以有 100 个客户端在排队等待建立连接 */</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">char</span> buf[<span style="color:#ae81ff">1024</span>];
+	<span style="color:#66d9ef">int</span> n;
+	<span style="color:#66d9ef">int</span> sockfd, clientfd;
+	<span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">sockaddr_in</span> serv_addr, client_addr;
+	socklen_t socklen;
+
+	sockfd <span style="color:#f92672">=</span> socket(AF_INET, SOCK_STREAM, <span style="color:#ae81ff">0</span>); <span style="color:#75715e">/* IPv4 协议， TCP 协议*/</span>
+	<span style="color:#66d9ef">if</span> (sockfd <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) {
+		perror(<span style="color:#e6db74">&#34;socket&#34;</span>);
+		<span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+	}
+	bzero(<span style="color:#f92672">&amp;</span>serv_addr, <span style="color:#66d9ef">sizeof</span>(serv_addr));
+	serv_addr.sin_family <span style="color:#f92672">=</span> AF_INET;
+	serv_addr.sin_port <span style="color:#f92672">=</span> htons(SERV_PORT);  <span style="color:#75715e">/* 指定端口号 */</span>
+	serv_addr.sin_addr.s_addr <span style="color:#f92672">=</span> htonl(INADDR_ANY); <span style="color:#75715e">/* 自动选择可用IP */</span>
+	<span style="color:#66d9ef">if</span> (bind(sockfd, (<span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">sockaddr</span><span style="color:#f92672">*</span>)<span style="color:#f92672">&amp;</span>serv_addr, <span style="color:#66d9ef">sizeof</span>(serv_addr)) <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>) {
+		perror(<span style="color:#e6db74">&#34;bind&#34;</span>);
+		<span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+	}
+	<span style="color:#66d9ef">if</span> (listen(sockfd, MAX_CONN) <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>) {
+		perror(<span style="color:#e6db74">&#34;listen&#34;</span>);
+		<span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+	}
+
+	socklen <span style="color:#f92672">=</span> <span style="color:#66d9ef">sizeof</span>(client_addr);	
+	clientfd <span style="color:#f92672">=</span> accept(sockfd, (<span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">sockaddr</span><span style="color:#f92672">*</span>)<span style="color:#f92672">&amp;</span>client_addr, <span style="color:#f92672">&amp;</span>socklen);
+	<span style="color:#66d9ef">if</span> (clientfd <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>) {
+		perror(<span style="color:#e6db74">&#34;accept&#34;</span>);
+		<span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+	}
+	inet_ntop(AF_INET, <span style="color:#f92672">&amp;</span>client_addr, buf, INET_ADDRSTRLEN);
+	printf(<span style="color:#e6db74">&#34;client IP is: %s, client port is: %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, buf, ntohs(client_addr.sin_port));
+	<span style="color:#66d9ef">while</span>(<span style="color:#ae81ff">1</span>) {	
+		n <span style="color:#f92672">=</span> read(clientfd, buf, <span style="color:#66d9ef">sizeof</span>(buf));
+		<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">++</span>) {
+			buf[i] <span style="color:#f92672">=</span> toupper(buf[i]);
+		}
+		write(clientfd, buf, n);
+	}
+	close(clientfd);
+	close(sockfd);
+
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+
+</code></pre></div><p>客户端代码：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;string.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;unistd.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdlib.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;sys/types.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;sys/socket.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;arpa/inet.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">#define error_exit(msg) \
+</span><span style="color:#75715e">	do {perror(msg); exit(EXIT_FAILURE);} while(0)
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">#define SERV_IP &#34;127.0.0.1&#34;
+</span><span style="color:#75715e">#define SERV_PORT 18888
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">int</span> argc, <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>argv[]) {
+	<span style="color:#66d9ef">int</span> sockfd, ret;
+	<span style="color:#66d9ef">int</span> n;
+	<span style="color:#66d9ef">char</span> buf[BUFSIZ];
+	<span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">sockaddr_in</span> serv_addr;
+	sockfd <span style="color:#f92672">=</span> socket(AF_INET, SOCK_STREAM, <span style="color:#ae81ff">0</span>);
+	<span style="color:#66d9ef">if</span> (sockfd <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+		error_exit(<span style="color:#e6db74">&#34;socket&#34;</span>);
+
+	memset(<span style="color:#f92672">&amp;</span>serv_addr, <span style="color:#ae81ff">0</span>, <span style="color:#66d9ef">sizeof</span>(serv_addr));
+	ret <span style="color:#f92672">=</span> inet_pton(AF_INET, SERV_IP, <span style="color:#f92672">&amp;</span>serv_addr.sin_addr.s_addr);
+	<span style="color:#66d9ef">if</span> (ret <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">0</span>) {
+		<span style="color:#66d9ef">if</span> (ret <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) 
+			error_exit(<span style="color:#e6db74">&#34;format error&#34;</span>);
+		<span style="color:#66d9ef">else</span>
+			error_exit(<span style="color:#e6db74">&#34;inet_pton&#34;</span>);
+	}
+
+	serv_addr.sin_family <span style="color:#f92672">=</span> AF_INET;
+	serv_addr.sin_port <span style="color:#f92672">=</span> htons(SERV_PORT);
+
+	ret <span style="color:#f92672">=</span> connect(sockfd, (<span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">sockaddr</span><span style="color:#f92672">*</span>)<span style="color:#f92672">&amp;</span>serv_addr, <span style="color:#66d9ef">sizeof</span>(serv_addr));
+	<span style="color:#66d9ef">if</span> (ret <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) {
+		error_exit(<span style="color:#e6db74">&#34;connect&#34;</span>);
+	}
+	<span style="color:#66d9ef">while</span>(<span style="color:#ae81ff">1</span>) {
+		fgets(buf, <span style="color:#66d9ef">sizeof</span>(buf), stdin);
+		write(sockfd, buf, strlen(buf));
+		n <span style="color:#f92672">=</span> read(sockfd, buf, <span style="color:#66d9ef">sizeof</span>(buf));
+		write(STDOUT_FILENO, buf, n);
+	}
+	close(sockfd);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+
+</code></pre></div><p>输入编译命令：</p>
+<p><img src="https://muyao-li.github.io/li-muyaodesu.github.io/images/e6a4d4c5baa2495ea623f3be8736275a.png" alt="在这里插入图片描述"></p>
+<p><strong>运行结果：</strong></p>
+<p><img src="https://muyao-li.github.io/li-muyaodesu.github.io/images/e49a214133e14a6a9d33b6911df8f06e.png" alt="在这里插入图片描述">
+<img src="https://muyao-li.github.io/li-muyaodesu.github.io/images/c9afef85848540478be2899c82464bfa.png" alt="在这里插入图片描述"></p>
+<h4 id="3hugo是一个静态网站生成器官网为httpsgohugoio查阅相关资料在linux下完成以下内容">3.Hugo是一个静态网站生成器，官网为：https://gohugo.io/，查阅相关资料，在Linux下，完成以下内容：</h4>
+<ul>
+<li>配置好Hugo相关环境：</li>
+</ul>
+<p><img src="https://muyao-li.github.io/li-muyaodesu.github.io/images/0a24da735a024558886167c5c2159fce.png" alt="在这里插入图片描述"></p>
+<ul>
+<li>使用Markdown语法编写网站内容，至少要包含的内容：Linux课程中的学习笔记、大作业完成步骤记录，且要求有相关图片、代码或命令。（参考以下内容：）</li>
+</ul>
+<p><a href="https://blog.csdn.net/qq_43938052/article/details/107735268?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167040714416800186574997%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=167040714416800186574997&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-7-107735268-null-null.142%5Ev68%5Econtrol,201%5Ev4%5Eadd_ask,213%5Ev2%5Et3_control1&amp;utm_term=linux%E4%B8%8B%E8%BD%BDHugo%E5%B9%B6%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B&amp;spm=1018.2226.3001.4187">个人博客搭建保姆级教程4——hugo</a></p>
+<p><a href="https://blog.csdn.net/cs13970021734/article/details/116000439">Linux下搭建Hugo博客并推送到github个人博客</a></p>
+<p><a href="https://blog.csdn.net/li_mu_yao/article/details/128425118?spm=1001.2014.3001.5501">Linux学习笔记</a></p>
+<ul>
+<li>使用Hugo，将上述内容生成静态网站，部署到Web服务器（如Nginx或Apache），访问Web服务器，测试可以正常访问。</li>
+</ul>
+<ol>
+<li>部署Web服务器，首先开启apache：</li>
+</ol>
+<p><img src="https://muyao-li.github.io/li-muyaodesu.github.io/images/878ddb2e239c40e2b6295d607248c73e.png" alt="在这里插入图片描述"></p>
+<ol start="2">
+<li>然后再myhugo目录下输入hugo生成public文件夹，将public文件夹里的全部文件复制到/var/www/html中，即输入如下命令：</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">cp -r public/* /var/www/html
+</code></pre></div><p><img src="https://muyao-li.github.io/li-muyaodesu.github.io/images/da36469cb1574f208657291aeabcef34.png" alt="在这里插入图片描述"></p>
+<ol start="3">
+<li>然后执行Ifconfig查看本机ip，最后在网页中输入192.168.29.132:8081/，即可看到本地部署的Web服务器上的Hugo网页：</li>
+</ol>
+<p><img src="https://muyao-li.github.io/li-muyaodesu.github.io/images/e0d7b5c738644908a6d3db961f129bd0.png" alt="在这里插入图片描述"></p>
+<ol start="4">
+<li>部署上述静态网站，使其可以公网访问，可以是自己的云服务器，或者一些免费的托管平台，如github pages。</li>
+</ol>
+<p>Github配置仓库远程连接：</p>
+<p><img src="https://muyao-li.github.io/li-muyaodesu.github.io/images/87b7a53c1c04406f9b12e6526a245e99.png" alt="在这里插入图片描述"></p>
+<p>在myhugo目录下输入hugo生成public文件夹，然后在public目录下输入如下代码push:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">git add .
+git commit -m <span style="color:#960050;background-color:#1e0010">“</span>hugo<span style="color:#960050;background-color:#1e0010">”</span>
+git push -u origin master 
+</code></pre></div><p>最后在在浏览器中输入https://muyao-li.github.io/li-muyaodesu.github.io/即可。</p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
